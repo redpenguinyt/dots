@@ -71,6 +71,7 @@
     },
     "battery": {
         "states": {
+            "full": 100,
             "good": 95,
             "warning": 30,
             "critical": 15
@@ -79,7 +80,7 @@
         "format-charging": "{capacity}% ",
         "format-alt": "{time} {icon}",
         "format-time": "{H}h {M}m",
-        "format-good": "{icon}", // An empty format will hide the module
+        "format-full": "{icon}", // An empty format will hide the module
         "format-plugged": "",
         "format-icons": ["", "", "", "", ""]
     },

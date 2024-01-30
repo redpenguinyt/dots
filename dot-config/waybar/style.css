@@ -83,13 +83,17 @@ button:hover {
     padding: 0 7px;
 }
 
+#battery {
+    padding-right: 8px;
+}
+
 #wireplumber {
     padding: 0 5px;
 }
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0 0px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
