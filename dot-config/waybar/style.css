@@ -28,7 +28,7 @@ window#waybar.hidden {
 }
 
 .modules-right {
-    padding-right: 7px;   
+    padding-right: 7px;
 }
 
 button {
@@ -83,7 +83,7 @@ button:hover {
     padding: 0 7px;
 }
 
-#battery {
+#battery { /* Battery icon was cut off before */
     padding-right: 8px;
 }
 
@@ -156,4 +156,3 @@ label:focus {
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
 }
-
