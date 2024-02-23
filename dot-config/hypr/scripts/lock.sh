@@ -1,3 +1,11 @@
 #!/bin/sh
 
-swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
+swaylock \
+    --color 151426 \
+    --grace 5 \
+    --clock --indicator \
+    --font "CaskaydiaMono Nerd Font" --text-color 93b5af \
+    --datestr "%a %e.%m.%Y" --timestr "%k:%M" \
+    --inside-color 1a1d2c -n \
+    --indicator-radius 300 \
+    --ring-color 8b88db --key-hl-color 91bfff \
