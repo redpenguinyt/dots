@@ -2,7 +2,6 @@
 
 swaylock \
     --color 151426 \
-    --grace 5 \
     --clock --indicator \
     --font "CaskaydiaMono Nerd Font" --text-color 93b5af \
     --datestr "%a %e.%m.%Y" --timestr "%H:%M" \
