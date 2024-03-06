@@ -62,6 +62,7 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
+        "interval": 5,
         "format": "{usage}% ",
         "tooltip": false
     },
@@ -70,6 +71,7 @@
         "tooltip-format": "{used}/{total} used"
     },
     "battery": {
+        "interval": 2,
         "states": {
             "full": 100,
             "good": 95,
@@ -89,7 +91,7 @@
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected 󰤫",
+        "format-disconnected": "󰤫",
         "format-alt": "{essid} | {ipaddr} {icon}",
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
     }
