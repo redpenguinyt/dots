@@ -1,4 +1,5 @@
 # Toggle between HDMI and built-in output
+touch /tmp/audioSetting
 if grep -Fxq "0" /tmp/audioSetting
   then
     echo 1 > /tmp/audioSetting
