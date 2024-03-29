@@ -1,0 +1,31 @@
+##  Ren's zshrc options
+##  These can be linked to your .zshrc with a line like: . "$HOME/Documents/dots/zshrc"
+##  	in your .zshrc, linking to wherever you have this file stored. Or you can just
+##		copy these lines directly to your .zshrc, i wont stop you
+
+# Playdate SDK setup
+export PLAYDATE_SDK_PATH="$HOME/Documents/Code/PlaydateSDK/"
+
+# Cargo setup
+. "$HOME/.cargo/env"
+
+# Options, binds and aliases
+
+PS1='%n@%m %~$ '
+
+setopt histignoredups
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey '^[[Z' reverse-menu-complete
+
+alias neofetch="clear && neofetch"
+alias song-download="yt-dlp -f 'ba' -x --audio-format mp3"
+alias vim="nvim"
+alias v="nvim"
+alias ls="eza"
+alias cat="bat"
+alias cls="clear"
+alias search-history="cat ~/.zsh_history | grep"
+
+export EDITOR="nvim"
