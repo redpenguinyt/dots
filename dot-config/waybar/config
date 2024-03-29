@@ -8,8 +8,8 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "gamemode", "cpu", "memory", "wireplumber", "network", "battery"],
-    
+    "modules-right": ["tray", "gamemode", "cpu", "memory", "wireplumber", "network", "battery"], 
+
     // Modules configuration
     "hyprland/workspaces": {
       "disable-scroll": true,
@@ -57,7 +57,7 @@
     },
     "clock": {
         // "timezone": "Europe/London",
-        "format": "{:%R   %A %x} ",
+        "format": "{:%R   %A %d/%m/%y} ",
         "tooltip": false,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
@@ -96,4 +96,3 @@
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
     }
 }
-
