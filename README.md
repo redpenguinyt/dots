@@ -5,7 +5,7 @@
 |WM|Hyprland|
 |---|-----|
 |App Launcher|fuzzel|
-|fetch|neofetch|
+|fetch|fastfetch|
 |Menu bar|waybar|
 |Notifications|dunst|
 |Terminal|kitty|

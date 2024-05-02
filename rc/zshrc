@@ -19,7 +19,7 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey '^[[Z' reverse-menu-complete
 
-alias neofetch="clear && neofetch"
+alias fetch="clear && fastfetch"
 alias song-download="yt-dlp -f 'ba' -x --audio-format mp3"
 alias vim="nvim"
 alias v="nvim"
