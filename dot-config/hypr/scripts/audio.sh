@@ -11,4 +11,4 @@ if grep -Fxq "0" /tmp/audioSetting
     pactl set-card-profile alsa_card.pci-0000_00_1f.3.3 output:hdmi-stereo+input:analog-stereo
 fi
 
-~/.config/hypr/scripts/mic.sh
+pactl set-source-volume @DEFAULT_SOURCE@ 30%
