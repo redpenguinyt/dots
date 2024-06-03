@@ -9,6 +9,9 @@ export PLAYDATE_SDK_PATH="$HOME/Documents/Code/PlaydateSDK/"
 # Cargo setup
 . "$HOME/.cargo/env"
 
+# Odin setup
+path+="$HOME/Documents/Code/Odin/Odin"
+
 # Options, binds and aliases
 
 PS1='%n@%m %~$ '
