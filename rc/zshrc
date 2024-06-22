@@ -26,3 +26,5 @@ alias search-history="cat ~/.zsh_history | grep"
 alias preview-media="ffplay -autoexit -vf scale=-1:800"
 
 export EDITOR="nvim"
+
+fetch --config $HOME/.config/fastfetch/startup.jsonc
