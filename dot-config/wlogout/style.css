@@ -2,7 +2,7 @@
 	background-image: none;
 }
 window {
-	background-color: rgba(12, 12, 12, 0);
+	background-color: rgba(12, 12, 12, 0.5);
 }
 button {
     border-radius: 5px;
