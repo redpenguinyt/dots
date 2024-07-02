@@ -1,14 +1,13 @@
 # Toggle between HDMI and built-in output
-touch /tmp/audioSetting
-if grep -Fxq "0" /tmp/audioSetting
-  then
-    echo 1 > /tmp/audioSetting
-    pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-stereo+input:analog-stereo
-    pactl set-card-profile alsa_card.pci-0000_00_1f.3.3 output:analog-stereo+input:analog-stereo
-  else
-    echo 0 > /tmp/audioSetting
-    pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:hdmi-stereo+input:analog-stereo
-    pactl set-card-profile alsa_card.pci-0000_00_1f.3.3 output:hdmi-stereo+input:analog-stereo
+
+export CARD=$(pactl list cards short | head -n 1 | awk '{print $2}')
+
+export audioSetting=$(pactl info | grep "^Default Sink" | cut -d'.' -f4)
+export monitorsLen=$(hyprctl monitors -j | jq 'length')
+if [ audioSetting == "analog-stereo" ] && [ monitorsLen > 1 ]; then
+    pactl set-card-profile $CARD output:hdmi-stereo+input:analog-stereo
+else
+    pactl set-card-profile $CARD output:analog-stereo+input:analog-stereo
 fi
 
 pactl set-source-volume @DEFAULT_SOURCE@ 30%
