@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "gamemode", "cpu", "memory", "wireplumber", "network", "battery"], 
+    "modules-right": ["tray", "gamemode", "cpu", "memory", "wireplumber", "network", "battery"],
 
     // Modules configuration
     "hyprland/workspaces": {
