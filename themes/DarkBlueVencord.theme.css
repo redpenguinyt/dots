@@ -104,6 +104,44 @@
     --textbox-markdown-syntax: rgb(82, 89, 95);
 }
 
+/* Ren's changes */
+
+.theme-dark .message_d5deea.selected_d5deea, .theme-dark.mouse-mode.full-motion .message_d5deea:hover /* Message hover colour */ {
+    background: color-mix(in srgb, var(--db-pane), transparent 80%);
+}
+
+.channelTextAreaDisabled_d0696b .scrollableContainer_d0696b { /* Disabled message box has consistent colour */
+    opacity: 1;
+}
+
+[class^="circleIcon"] { /* Colours for the add/discover server buttons */
+    color: var(--db-accent-1);
+}
+
+[class^="channelTextArea"] { /* Adjust message box position */
+    margin: 5px 0;
+}
+
+.form_a7d72e {
+    background: var(--bg-overlay-2);
+    padding: 0px;
+}
+
+.form_a7d72e:before {
+    background: none;
+}
+
+.base_d7ebeb { /* Move typing/slowmode indicator above message box */
+    bottom: 52px;
+    left: 0px;
+    right: 0px;
+    padding-right: 16px;
+    background: color-mix(in srgb, var(--db-pane), transparent 80%);
+    pointer-events: none;
+}
+
+/* End Ren's changes */
+
 .resultsGroup-r_nuzN {
     background-color: var(--background-secondary);
     border-radius: var(--border-radius);
