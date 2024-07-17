@@ -85,7 +85,8 @@
         "format-time": "{H}h {M}m",
         "format-full": "{icon}", // An empty format will hide the module
         "format-plugged": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "Charged {capacity}%"
     },
     "network": {
         "format-wifi": "{icon}",
