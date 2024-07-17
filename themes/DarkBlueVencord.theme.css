@@ -9,13 +9,13 @@
 
 :root {
     /* --- Colour scheme --- */
-    --db-background: #1A1D2C;
+    --db-background: #1a1d2c;
     --db-pane: #151426;
     --db-border: #505072;
-    --db-accent-1: #91BFFF;
-    --db-accent-2: #8B88DB;
-    --db-text-normal: #93B5AF;
-    --db-text-inactive: #657B83;
+    --db-accent-1: #91bfff;
+    --db-accent-2: #8b88dB;
+    --db-text-normal: #93b5af;
+    --db-text-inactive: #657b83;
 
     /* --------- BASE THEME --------- */
     --blurple-replace: var(--db-accent-1);
