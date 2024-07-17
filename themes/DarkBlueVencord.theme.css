@@ -18,22 +18,26 @@
     --db-text-inactive: #657b83;
 
     /* --------- BASE THEME --------- */
+    --bg-overlay-1: var(--db-pane);
+    --bg-overlay-2: var(--db-pane);
+    --bg-overlay-3: var(--db-pane);
     --blurple-replace: var(--db-accent-1);
     --background-primary: var(--db-background);
     --background-secondary: var(--db-pane);
+    --background-secondary-alt: var(--db-pane);
     --background-floating: var(--db-background);
     --background-secondary-alt: var(--background-floating);
     --background-tertiary: var(--db-pane);
-    --background-accent: rgb(17, 29, 46);
+    --background-accent: var(--db-background);
     --userarea-background: var(--background-tertiary);
     --header-primary: var(--db-text-normal);
     --header-secondary: rgb(139, 148, 158);
-    --elevation-low: 0 1px 0 rgba(40, 40, 50, 0.2), 0 1.5px 0 rgba(60, 60, 70, 0.05), 0 2px 0 rgba(40, 40, 50, 0.05);
+    --elevation-low: none;
     --elevation-high: 0 8px 16px rgba(0, 0, 0, 0.24);
     --channels-default: rgb(139, 148, 158);
     --channeltextarea-background: var(--background-secondary);
     --voice-color: var(--brand-experiment);
-    --guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    --guild-header-text-shadow: 0 0px 0px rgba(0, 0, 0, 0);
     --activity-card-background: #0f0f0f;
     --interactive-normal: rgb(139, 148, 158);
     --interactive-hover: #dcddde;
@@ -80,11 +84,11 @@
     --info-help-foreground: hsl(197, calc(var(--saturation-factor, 1)*100%), 47.8%);
     --info-help-text: #fff;
     --status-warning-text: #000;
-    --scrollbar-thin-thumb: rgb(22, 27, 34);
+    --scrollbar-thin-thumb: var(--db-pane);
     --scrollbar-thin-track: transparent;
-    --scrollbar-auto-thumb: rgb(22, 27, 34);
+    --scrollbar-auto-thumb: var(--db-pane);
     --scrollbar-auto-track: rgba(17, 19, 24, 0.308);
-    --scrollbar-auto-scrollbar-color-thumb: rgb(22, 27, 34);
+    --scrollbar-auto-scrollbar-color-thumb: var(--db-pane);
     --scrollbar-auto-scrollbar-color-track: rgba(17, 19, 24, 0.308);
     --elevation-stroke: 0 0 0 1px rgba(4, 4, 5, 0.15);
     --elevation-low: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
