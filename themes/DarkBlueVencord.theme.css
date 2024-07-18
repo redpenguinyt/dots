@@ -131,6 +131,14 @@
     background: none;
 }
 
+[class^="attachWrapper"] { /* Align message box buttons to the bottom to stay in line with mute/deafen/settings buttons */
+    align-self: flex-end;
+}
+
+[class^="buttons_"] {
+    align-self: flex-end;
+}
+
 .base_d7ebeb { /* Move typing/slowmode indicator above message box */
     bottom: 52px;
     left: 0px;
