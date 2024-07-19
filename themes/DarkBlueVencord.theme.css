@@ -140,7 +140,8 @@
 }
 
 .base_d7ebeb { /* Move typing/slowmode indicator above message box */
-    bottom: 52px;
+    top: -24px;
+    bottom: 0px;
     left: 0px;
     right: 0px;
     padding-right: 16px;
