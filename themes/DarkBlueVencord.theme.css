@@ -149,6 +149,19 @@
     pointer-events: none;
 }
 
+[class^="panels_"] > [class^="wrapper"] > [class^="container_"] { /* Customise the look of the voice chat panel */
+    border: none;
+    background: var(--db-pane);
+}
+
+[class^="callContainer"] { /* Stream pane background */
+    background-color: var(--db-pane);
+}
+
+[class^="videoControls"] > [class^="gradient"] { /* Stream pane shadow on top and bottom */
+    display: none;
+}
+
 /* End Ren's changes */
 
 .resultsGroup-r_nuzN {
