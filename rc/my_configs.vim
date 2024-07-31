@@ -1,5 +1,5 @@
-" Ren's zshrc options
-" These can be linked to your .vimrc with a line like: source ~/Documents/dots/rc/my_configs.vim
+" Ren's neovim config
+" This can be linked to your .vimrc with a line like: source ~/Documents/dots/rc/my_configs.vim
 
 " Clipboard fix
 set clipboard+=unnamedplus
