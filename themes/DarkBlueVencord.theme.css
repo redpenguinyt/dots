@@ -39,9 +39,9 @@
     --voice-color: var(--brand-experiment);
     --guild-header-text-shadow: 0 0px 0px rgba(0, 0, 0, 0);
     --activity-card-background: #0f0f0f;
-    --interactive-normal: rgb(139, 148, 158);
-    --interactive-hover: #dcddde;
-    --interactive-active: #91BFFF;
+    --interactive-normal: var(--db-text-inactive);
+    --interactive-hover: var(--db-text-normal);
+    --interactive-active: var(--db-accent-1);
     --interactive-muted: rgb(76, 82, 88);
     --background-modifier-hover: rgba(33, 38, 45, 0.26);
     --background-modifier-active: rgba(33, 38, 45, 0.44);
