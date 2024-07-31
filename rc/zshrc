@@ -16,6 +16,7 @@ bindkey '^[[Z' reverse-menu-complete
 
 alias fetch="clear && fastfetch"
 alias song-download="yt-dlp -f 'ba' -x --audio-format mp3"
+alias yt-dlp="yt-dlp --format mp4"
 alias vim="nvim"
 alias v="nvim"
 alias ls="eza -h"
