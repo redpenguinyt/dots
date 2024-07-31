@@ -1,0 +1,30 @@
+.theme-dark {
+    --background-primary: #1a1d2c;
+    --background-secondary: #151426;
+    --background-secondary-alt: #151426;
+    --background-modifier-form-field: #151426;
+    --code-background: #151426;
+
+    --interactive-normal: #151426;
+    --interactive-hover: #505072;
+    --background-modifier-border-hover: #505072;
+    --toggle-thumb-color: #1a1d2c;
+
+    --tab-outline-color: #657b83;
+    --divider-color: #657b83;
+    --modal-border-color: #657b83;
+    --background-modifier-border: #505072;
+    --background-modifier-border-focus: #505072;
+
+    --icon-color: #93b5af;
+    --text-normal: #93b5af;
+    --text-muted: #657b83;
+}
+
+.workspace-drawer-vault-actions > :first-child { /* Hide help button */
+    display: none;
+}
+
+.sidebar-toggle-button.mod-right { /* Hide right sidebar */
+    display: none;
+}
