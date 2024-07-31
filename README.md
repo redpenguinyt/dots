@@ -12,8 +12,9 @@
 
 ## Themes for specific applications:
 - [Firefox (Firefox Colour link)](https://color.firefox.com/?theme=XQAAAAIYAQAAAAAAAABBKYhm849SCia2CaaEGccwS-xMDPr07qaHbYNzVWm9pdZWuSbUxoTOwv_PHaC7hs1paoxg9q2vdsZDln5DctMZmmL1UI1JbR4fWnRJS8bfXxdFI48Kct99Z2HeyLd4RKyMcqENeGj7h1bTVwy63HVQKGnpelOaRbKvv97WTCbVF_B58uXyzS2SdnF_0GUgJbxqkHn1V21oltSJcgsGynGlqfCRxh4qqIB6_bAJJKztQv_0YFU0)
-- Vencord (`DarkBlueVencord.theme.css` in the themes folder)
-- Spicetify (`DarkBlueSpicetify/` in the themes folder)
+- Vencord (`themes/DarkBlueVencord.theme.css`)
+- Spicetify (`themes/DarkBlueSpicetify/`)
+- Obsidian (`themes/ObsidianColours.css`)
 - [Vim configuration](https://github.com/amix/vimrc) (+ the extra settings in `rc/my_configs.vim`)
 
 ## Installing dots
