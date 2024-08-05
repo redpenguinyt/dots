@@ -161,6 +161,14 @@
     display: none;
 }
 
+[class^="header"] { /* Remove header bar box-shadows */
+    box-shadow: none;
+}
+
+[class^="chat"] > [class^="content"]:before {
+    box-shadow: none;
+}
+
 /* End Ren's changes */
 
 .resultsGroup-r_nuzN {
