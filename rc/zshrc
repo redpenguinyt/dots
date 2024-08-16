@@ -24,7 +24,6 @@ alias cat="bat"
 alias clear="echo -n \"\e[H\e[3J\""
 alias cls="clear"
 alias search-history="cat ~/.zsh_history | grep"
-alias preview-media="ffplay -autoexit -vf scale=-1:800"
 
 export EDITOR="nvim"
 
