@@ -99,7 +99,7 @@
     --background-mentioned: rgba(13, 17, 23, 0.466);
     --background-mentioned-hover: rgba(20, 33, 53, 0.233);
     --background-message-hover: rgba(4, 4, 5, 0.07);
-    --activity-card-background: #202225;
+    --activity-card-background: var(--db-pane);
     --textbox-markdown-syntax: rgb(82, 89, 95);
 }
 
@@ -161,12 +161,14 @@
     display: none;
 }
 
-[class^="header"] { /* Remove header bar box-shadows */
+[class^="chat"] > [class^="content"]:before, /* Remove header bar box-shadows */
+[class^="tabBody"]:before,
+[class^="searchBar"], [class^="header"] {
     box-shadow: none;
 }
 
-[class^="chat"] > [class^="content"]:before {
-    box-shadow: none;
+[class^="scroller"] {
+    border-left: none;
 }
 
 /* End Ren's changes */
