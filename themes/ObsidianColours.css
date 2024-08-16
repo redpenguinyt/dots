@@ -29,3 +29,11 @@
 .sidebar-toggle-button.mod-right { /* Hide right sidebar */
     display: none;
 }
+
+.mod-top-left-space:not(.mod-top-right-space) > .workspace-tab-header-container {
+    border-bottom: none;
+}
+
+.mod-top-left-space:not(.mod-top-right-space) > .workspace-tab-header-container > div:not(:last-child) {
+    display: none;
+}
