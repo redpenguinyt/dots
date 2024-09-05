@@ -171,6 +171,10 @@
     border-left: none;
 }
 
+[class^="channelAppLauncher"] { /* Remove activity launcher from message bar */
+    display: none;
+}
+
 /* End Ren's changes */
 
 .resultsGroup-r_nuzN {
