@@ -17,7 +17,7 @@ window#waybar.hidden {
 .modules-left, .modules-right, .modules-center {
     background: #151426;
     margin: 5px;
-    margin-bottom: 2px; /* Size of gap between bar and windows */
+    margin-bottom: 0px; /* Size of gap between bar and windows */
     border: 2px solid #151426;
     border-radius: 5px;
     padding-top: 1.5px;
