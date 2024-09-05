@@ -1,11 +1,10 @@
 {
     "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "position": "top",
+    "height": 30,
+    // "width": 1280,
+    "spacing": 4,
 
-    // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "gamemode", "cpu", "memory", "wireplumber", "network", "battery"],
@@ -28,21 +27,16 @@
         "default": ""
       }
     },
-    "hyprland/window": {
-        "rewrite": {
-            "(.*) — Mozilla Firefox": "󰈹  $1",
-            "(.*) - Discord": "󰙯  $1",
-        },
+    "clock": {
+        "interval": 60,
+        // "timezone": "Europe/London",
+        "format": "{:%R   %A %d/%m/%y} ",
+        "tooltip": false,
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "tray": {
         "icon-size": 16,
         "spacing": 10
-    },
-    "wireplumber": {
-        "format": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": ["", "", ""],
-        "on-click": "~/.config/hypr/scripts/audio.sh"
     },
     "gamemode": {
         "format": "{glyph}",
@@ -55,13 +49,6 @@
         "tooltip": true,
         "tooltip-format": "Games running: {count}"
     },
-    "clock": {
-        "interval": 60,
-        // "timezone": "Europe/London",
-        "format": "{:%R   %A %d/%m/%y} ",
-        "tooltip": false,
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-    },
     "cpu": {
         "interval": 2,
         "format": "{usage}% ",
@@ -71,6 +58,21 @@
         "interval": 2,
         "format": "{percentage}% ",
         "tooltip-format": "{used}/{total} used"
+    },
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": ["", "", ""],
+        "on-click": "~/.config/hypr/scripts/audio.sh"
+    },
+    "network": {
+        "format-wifi": "{icon}",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "󰤫",
+        "format-alt": "{essid} | {ipaddr} {icon}",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
     },
     "battery": {
         "interval": 2,
@@ -84,18 +86,8 @@
         "format-charging": "{capacity}% ",
         "format-alt": "{time} {icon}",
         "format-time": "{H}h {M}m",
-        "format-full": "{icon}", // An empty format will hide the module
-        "format-plugged": "",
+        "format-full": "{icon}",
         "format-icons": ["", "", "", "", ""],
         "tooltip-format": "Charged {capacity}%"
-    },
-    "network": {
-        "format-wifi": "{icon}",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "󰤫",
-        "format-alt": "{essid} | {ipaddr} {icon}",
-        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
     }
 }
