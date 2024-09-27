@@ -54,4 +54,6 @@
       size = 32;
     };
   };
+
+  home.file.".local/share/icons/default".source = "${pkgs.catppuccin-cursors.macchiatoDark}/share/icons/catppuccin-macchiato-dark-cursors";
 }
