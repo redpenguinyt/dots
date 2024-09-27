@@ -30,6 +30,10 @@
     pulse.enable = true;
   };
 
+  # For Steam
+  hardware.graphics.enable32Bit = true;
+  hardware.pulseaudio.support32Bit = true;
+
   # Core programs
   programs.zsh.enable = true;
   programs.neovim.enable = true;
