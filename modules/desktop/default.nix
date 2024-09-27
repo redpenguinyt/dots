@@ -1,10 +1,10 @@
 { home-manager, config, pkgs, ... }:
 
 {
-#   wayland.windowManager.hyprland = {
-#     enable = false;
-#     settings = {};
-#   };
+  # wayland.windowManager.hyprland = {
+  #   enable = false;
+  #   settings = {};
+  # };
 
   home.packages = with pkgs; [
     # hyprland
@@ -34,13 +34,24 @@
 
   gtk = {
     enable = true;
-
     gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
+
+    theme.name = "Adwaita-dark";
+
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+
+    font = {
+      name = "Cantarell";
+      size = 11;
+    };
 
     cursorTheme = {
       name = "Catppuccin-Macchiato-Dark";
+      package = pkgs.catppuccin-cursors.macchiatoDark;
       size = 32;
     };
-    iconTheme.name = "Papirus-Dark";
   };
 }
