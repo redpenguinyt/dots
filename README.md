@@ -1,11 +1,10 @@
-# ren's hyprland dotfiles
+# ren's NixOS+Hyprland dotfiles
 
 ![Screenshot-2024-01-17-13-15-14](https://github.com/redpenguinyt/dots/assets/79577742/bf3c08cb-91da-4448-9d6c-67b3f6752d20)
 
 |WM|Hyprland|
 |---|-----|
 |App Launcher|fuzzel|
-|fetch|fastfetch|
 |Menu bar|waybar|
 |Notifications|dunst|
 |Terminal|kitty|
@@ -16,10 +15,9 @@
 - Vencord (`themes/DarkBlueVencord.theme.css`)
 - Spicetify (`themes/DarkBlueSpicetify/`)
 - Obsidian Config (`themes/ObsidianConfig/`)
-- [Vim configuration](https://github.com/amix/vimrc) (+ the extra settings in `rc/my_configs.vim`)
 
 ## Installing dots
 
-You can symlink the configs in the `dot-config` directory by running `stow --target=$HOME/.config/ dot-config --dotfiles` from this repository's directory
+You can install the entire setup onto your system with `sudo nixos-rebuild switch --fast --flake /path/to/root/#default`. If you just want the Hyprland dotfiles, you can find those in `modules/desktop`
 
 To use the configs in the `rc` directory, follow the individual instructions for each file there
