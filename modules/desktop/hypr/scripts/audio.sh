@@ -1,13 +1,12 @@
 # Toggle between HDMI and built-in output
 
-export CARD=$(pactl list cards short | grep pci | head -n 1 | awk '{print $2}')
+export SINKS=$(wpctl status -k | rg Sinks: -A 2 -m 1 | tail -n +2 | cut -c 7-)
+echo "Available Sinks"
+echo "$SINKS"
 
-export audioSetting=$(pactl info | grep "^Default Sink" | cut -d'.' -f4)
-export monitorsLen=$(hyprctl monitors -j | jq 'length')
-if [ "$audioSetting" = "analog-stereo" ] && (( monitorsLen > 1 )); then
-    pactl set-card-profile $CARD output:hdmi-stereo+input:analog-stereo
-else
-    pactl set-card-profile $CARD output:analog-stereo+input:analog-stereo
-fi
+export NEW_SINK_ID=$(echo "$SINKS" | rg -v "\*" | cut -c 5-6)
+echo "Switching to sink $NEW_SINK_ID"
 
-pactl set-source-volume @DEFAULT_SOURCE@ 30%
+wpctl set-default "$NEW_SINK_ID"
+
+wpctl set-volume @DEFAULT_SOURCE@ 30%
