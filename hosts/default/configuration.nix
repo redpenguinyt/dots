@@ -59,7 +59,6 @@
     killall
     xdg-utils
     unzip
-    file-roller
 
     adwaita-icon-theme
     hicolor-icon-theme

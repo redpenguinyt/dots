@@ -9,7 +9,7 @@
     ];
   };
 
-  environment.systemPackages = [ pkgs.imv ];
+  environment.systemPackages = [ pkgs.imv pkgs.file-roller ];
 
   programs.xfconf.enable = true;
 
