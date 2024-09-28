@@ -17,7 +17,7 @@
       v     = "nvim";
       cat   = "bat";
       ls    = "eza -h";
-      clear = "echo -n \"\e[H\e[3J\"";
+      clear = "echo -n '\\e[H\\e[3J'";
       cls   = "clear";
     };
 
