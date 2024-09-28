@@ -25,6 +25,24 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
+  # Login manager
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+	user = "greeter";
+      };
+    };
+  };
+
+  # Fingerprint
+  systemd.services.fprintd = {
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig.Type = "simple";
+  };
+  services.fprintd.enable = true;
+
   # Sound
   services.pipewire = {
     enable = true;
