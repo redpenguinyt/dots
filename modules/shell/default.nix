@@ -16,6 +16,7 @@
 
       v     = "nvim";
       cat   = "bat";
+      grep  = "rg";
       ls    = "eza -h";
       clear = "echo -n '\\e[H\\e[3J'";
       cls   = "clear";
@@ -29,7 +30,7 @@
       autoload -U colors && colors
       PS1="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~%{$reset_color%}]# "
 
-      fastfetch --config ${./fastfetch/startup.jsonc} 
+      fastfetch --config ${./fastfetch/startup.jsonc}
     '';
 
     history = {
@@ -46,6 +47,7 @@
   };
 
   programs.bat.enable = true;
+  programs.ripgrep.enable = true;
   programs.eza = {
     enable = true;
     enableZshIntegration = true;
@@ -55,6 +57,7 @@
 
   programs.neovim = { # TODO: make a separate module for neovim
     enable = true;
+    defaultEditor = true;
 
     viAlias = true;
     vimAlias = true;
@@ -78,5 +81,5 @@
   };
 
   programs.cava.enable = true;
-  home.file.".config/cava".source = ./cava; 
+  home.file.".config/cava".source = ./cava;
 }
