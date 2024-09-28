@@ -77,6 +77,10 @@
     fira-code-symbols
   ];
 
+  # Laptop
+  services.tlp.enable = true;
+  services.thermald.enable = true;
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
