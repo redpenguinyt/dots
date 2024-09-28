@@ -13,8 +13,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.timeout = 0;
 
-  networking.hostName = "pingu2"; # Define your hostname.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.hostName = "pingu2";
+  networking.networkmanager.enable = true;
+  systemd.services.NetworkManager-wait-online.enable = false; # Avoid waiting for network on boot
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
