@@ -82,6 +82,7 @@
     usbutils
     xdg-utils
     unzip
+    ffmpeg
 
     adwaita-icon-theme
     hicolor-icon-theme
@@ -101,7 +102,7 @@
 
   # Laptop
   services.tlp.enable = true;
-  services.thermald.enable = true;
+  # services.thermald.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

@@ -24,12 +24,13 @@
     vesktop
     thunderbird
 
+    blender
     vscode
     rustdesk
     gimp
     obs-studio
 
-    osu-lazer
+    osu-lazer-bin
     steam
     modrinth-app
   ];
