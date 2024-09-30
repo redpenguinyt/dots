@@ -3,7 +3,7 @@
 {
   imports =
     [
-      ./hardware-configuration.nix       
+      ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
       ../../modules/thunar
     ];
@@ -23,18 +23,16 @@
 
   # Set your time zone.
   time.timeZone = "Europe/London";
-  
+
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
   # Login manager
   services.greetd = {
     enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-	user = "greeter";
-      };
+    settings.default_session = {
+      command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+      user = "greeter";
     };
   };
 
@@ -125,4 +123,3 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
 }
-
