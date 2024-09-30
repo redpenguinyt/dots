@@ -24,8 +24,14 @@
   # Set your time zone.
   time.timeZone = "Europe/London";
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  # Printing
+  services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
 
   # Login manager
   services.greetd = {
