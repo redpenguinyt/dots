@@ -27,9 +27,9 @@
   home.file = {
     ".config/hypr".source = ./hypr;
     ".config/waybar".source = ./waybar;
+    ".config/wlogout".source = ./wlogout;
     ".config/dunst/dunstrc".source = ./dunstrc;
     ".config/fuzzel/fuzzel.ini".source = ./fuzzel.ini;
-    ".config/wlogout".source = ./wlogout;
   };
 
   gtk = {
