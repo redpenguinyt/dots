@@ -17,10 +17,10 @@
     brightnessctl playerctl
     grim slurp hyprpicker jq
     wlogout
-    dunst libnotify 
-    waybar 
+    dunst libnotify
+    waybar
     wl-clipboard wl-clip-persist
-    fuzzel 
+    fuzzel
     kitty
   ];
 
@@ -55,5 +55,6 @@
     };
   };
 
+  # Cursor
   home.file.".local/share/icons/default".source = "${pkgs.catppuccin-cursors.macchiatoDark}/share/icons/catppuccin-macchiato-dark-cursors";
 }
