@@ -56,12 +56,14 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # jack.enable = true;
+    jack.enable = true;
   };
+  hardware.pulseaudio.enable = false;
+  boot.blacklistedKernelModules = [ "snd_pcsp" ];
 
   # For Steam
   hardware.graphics.enable32Bit = true;
-  hardware.pulseaudio.support32Bit = true;
+  # hardware.pulseaudio.support32Bit = true;
 
   # Core programs
   programs.zsh.enable = true;
@@ -85,6 +87,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     killall
+    alsa-utils
     usbutils
     xdg-utils
     unzip
