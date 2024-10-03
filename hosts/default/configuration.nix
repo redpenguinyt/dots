@@ -14,6 +14,7 @@
   boot.loader.timeout = 0;
   boot.kernelParams = [ "quiet" "loglevel=3" ];
   boot.plymouth.enable = true;
+  services.fwupd.enable = true; # Framework BIOS updater
 
   networking.hostName = "pingu2";
   networking.networkmanager.enable = true;
