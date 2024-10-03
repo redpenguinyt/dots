@@ -25,33 +25,54 @@
       }
 
       {
-      	plugin = tokyonight-nvim; # Tokyo Night Theme
+        plugin = lightline-vim;
+        config = toLuaFile ./plugins/lightline.lua;
+      }
+
+      { # Theme
+      	plugin = tokyonight-nvim;
 	      config = toLua ''
-          require('tokyonight').setup({ transparent = true })
-	        vim.cmd[[colorscheme tokyonight]]
+            require('tokyonight').setup({ transparent = true })
+            vim.cmd[[colorscheme tokyonight]]
 	      '';
       }
 
-      {
+      { # Nicer comments
         plugin = comment-nvim;
         config = toLua "require('Comment').setup()";
       }
-
-      {
-        plugin = lightline-vim;
-        config = toLua ''vim.g.lightline = {
-          colorscheme = 'wombat',
-          active = {
-            left = { { 'mode', 'paste' }, { 'readonly', 'filename', 'modified' } },
-            right = { { 'lineinfo' }, { 'percent' }, { 'filetype' } },
-          },
-          component_function = { gitbranch = 'FugitiveHead' },
-        }'';
-      }
-
-      {
+      { # Autopair and highlight matching brackets {}
         plugin = nvim-autopairs;
         config = toLua "require('nvim-autopairs').setup {}";
+      }
+
+      { # Code completion
+        plugin = nvim-cmp;
+        config = toLuaFile ./plugins/cmp.lua;
+      }
+      luasnip
+      cmp_luasnip
+      friendly-snippets
+      cmp-nvim-lsp
+
+      { # Telescope
+        plugin = telescope-nvim;
+        config = toLuaFile ./plugins/telescope.lua;
+      }
+      telescope-fzf-native-nvim
+
+      { # Treesitter
+        plugin = (nvim-treesitter.withPlugins (p: [
+          p.tree-sitter-nix
+          p.tree-sitter-vim
+          p.tree-sitter-bash
+          p.tree-sitter-lua
+          p.tree-sitter-python
+          p.tree-sitter-json
+          p.tree-sitter-c
+          p.tree-sitter-rust
+        ]));
+        config = toLuaFile ./plugins/treesitter.lua;
       }
     ];
 
