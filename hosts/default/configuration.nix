@@ -21,8 +21,8 @@
   systemd.services.NetworkManager-wait-online.enable = false; # Avoid waiting for network on boot
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  system.stateVersion = "24.05"; # Do not change under any circumstance
 
-  # Set your time zone.
   time.timeZone = "Europe/London";
 
   # Printing
@@ -32,44 +32,6 @@
     nssmdns4 = true;
     openFirewall = true;
   };
-
-
-  # Login manager
-  services.greetd = {
-    enable = true;
-    settings.default_session = {
-      command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-      user = "greeter";
-    };
-  };
-
-  # Fingerprint
-  systemd.services.fprintd = {
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig.Type = "simple";
-  };
-  services.fprintd.enable = true;
-
-  # Sound
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
-  hardware.pulseaudio.enable = false;
-  boot.blacklistedKernelModules = [ "snd_pcsp" ];
-
-  # For Steam
-  hardware.graphics.enable32Bit = true;
-  # hardware.pulseaudio.support32Bit = true;
-
-  # Core programs
-  programs.zsh.enable = true;
-  programs.neovim.enable = true;
-  programs.hyprland.enable = true;
 
   # User
   users.users.ren = {
@@ -84,8 +46,7 @@
     };
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # Core packages
   environment.systemPackages = with pkgs; [
     killall
     alsa-utils
@@ -97,6 +58,15 @@
     adwaita-icon-theme
     hicolor-icon-theme
   ];
+
+  # Core programs
+  programs.zsh.enable = true;
+  programs.neovim.enable = true;
+  programs.hyprland.enable = true;
+
+  # For Steam
+  hardware.graphics.enable32Bit = true;
+  hardware.pulseaudio.support32Bit = true;
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "CascadiaCode" "CascadiaMono" ]; })
@@ -110,8 +80,34 @@
     fira-code-symbols
   ];
 
+  # Sound
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+  hardware.pulseaudio.enable = false;
+
+  # Fingerprint
+  systemd.services.fprintd = {
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig.Type = "simple";
+  };
+  services.fprintd.enable = true;
+
+  # Login manager
+  services.greetd = {
+    enable = true;
+    settings.default_session = {
+      command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+      user = "greeter";
+    };
+  };
+
   # Laptop
-  # services.tlp.enable = true;
   services.power-profiles-daemon.enable = true;
   # services.thermald.enable = true;
 
@@ -121,16 +117,4 @@
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # system.copySystemConfiguration = true;
-
-  # Most users should NEVER change this value after the initial install, for any reason,
-  # even if you've upgraded your system to a new NixOS release.
-  #
-  # See https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion
-  system.stateVersion = "24.05"; # Did you read the comment?
-
 }
