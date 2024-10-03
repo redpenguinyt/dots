@@ -55,15 +55,6 @@
   };
   programs.thefuck.enable = true;
 
-  programs.neovim = { # TODO: make a separate module for neovim
-    enable = true;
-    defaultEditor = true;
-
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
-  };
-
   programs.git = {
     enable = true;
     userName  = "Red Penguin";

@@ -6,6 +6,7 @@
     ../../modules/desktop
     ../../modules/kitty
     ../../modules/shell
+    ../../modules/neovim
   ];
 
   home.username = "ren";
