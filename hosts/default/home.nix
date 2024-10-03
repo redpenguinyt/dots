@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
@@ -15,8 +15,7 @@
   home.stateVersion = "24.05"; # Please read the comment before changing.
   nixpkgs.config.allowUnfreePredicate = _: true;
 
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
+  # Home packages
   home.packages = with pkgs; [
     firefox
     obsidian
