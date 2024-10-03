@@ -25,14 +25,6 @@
 
   time.timeZone = "Europe/London";
 
-  # Printing
-  services.printing.enable = true;
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
-
   # User
   users.users.ren = {
     isNormalUser = true;
@@ -105,6 +97,14 @@
       command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
       user = "greeter";
     };
+  };
+
+  # Printing
+  services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
   };
 
   # Laptop
