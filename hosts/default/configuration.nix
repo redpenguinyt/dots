@@ -73,7 +73,7 @@
   # User
   users.users.ren = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" ];
     shell = pkgs.zsh;
   };
   home-manager = {
