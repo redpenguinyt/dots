@@ -1,6 +1,4 @@
-{ home-manager, config, pkgs, ... }:
-
-{
+{ pkgs, ... }: {
   home.packages = [ pkgs.kitty ];
 
   home.file = {

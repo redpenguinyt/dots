@@ -1,6 +1,4 @@
-{ pkgs, inputs, ... }:
-
-{
+{ pkgs, inputs, ... }: {
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
     ../../modules/desktop
@@ -12,10 +10,10 @@
   home.username = "ren";
   home.homeDirectory = "/home/ren";
 
-  home.stateVersion = "24.05"; # Please read the comment before changing.
+  home.stateVersion = "24.05"; # Don't change under any circumstance
   nixpkgs.config.allowUnfreePredicate = _: true;
+  programs.home-manager.enable = true; # Let Home Manager install and manage itself.
 
-  # Home packages
   home.packages = with pkgs; [
     firefox
     obsidian
@@ -42,7 +40,4 @@
       theme = spicePkgs.themes.catppuccin;
       colorScheme = "macchiato";
     };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }

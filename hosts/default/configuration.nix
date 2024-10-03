@@ -1,12 +1,9 @@
-{ inputs, pkgs, ... }:
-
-{
-  imports =
-    [
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
-      ../../modules/thunar
-    ];
+{ inputs, pkgs, ... }: {
+  imports = [
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+    ../../modules/thunar
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
