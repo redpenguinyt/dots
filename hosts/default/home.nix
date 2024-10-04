@@ -17,17 +17,18 @@
   home.packages = with pkgs; [
     firefox
     obsidian
-    synology-drive-client
-
-    vesktop
-    thunderbird
-
     blender
     vscode
     rustdesk
     gimp
-    obs-studio
 
+    vesktop
+    thunderbird
+    synology-drive-client
+
+    baobab
+
+    obs-studio
     osu-lazer-bin
     steam
     modrinth-app
