@@ -108,6 +108,8 @@
   services.power-profiles-daemon.enable = true;
   # services.thermald.enable = true;
 
+  services.logind.powerKey = "ignore";
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
