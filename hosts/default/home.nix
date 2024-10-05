@@ -14,13 +14,17 @@
   nixpkgs.config.allowUnfreePredicate = _: true;
   programs.home-manager.enable = true; # Let Home Manager install and manage itself.
 
+  home.sessionPath = [ "$HOME/.cargo/bin" ];
+
   home.packages = with pkgs; [
     firefox
     obsidian
     blender
-    vscode
     rustdesk
     gimp
+
+    vscode
+    gcc rustup python3
 
     vesktop
     thunderbird
