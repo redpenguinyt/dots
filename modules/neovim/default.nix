@@ -72,6 +72,11 @@
         ]));
         config = toLuaFile ./plugins/treesitter.lua;
       }
+
+      {
+        plugin = gitsigns-nvim;
+        config = toLuaFile ./plugins/gitsigns.lua;
+      }
     ];
 
     extraLuaConfig = ''
