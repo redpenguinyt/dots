@@ -58,6 +58,10 @@
     enable = true;
     userName  = "Red Penguin";
     userEmail = "redpenguin777@yahoo.com";
+    extraConfig = {
+      init.defaultBranch = "master";        
+      advice.addIgnoredFile = false;
+    };
   };
 
   programs.fastfetch.enable = true;
