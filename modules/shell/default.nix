@@ -11,6 +11,7 @@
       rebuild = "sudo nixos-rebuild switch --fast --flake";
       fetch   = "clear && fastfetch";
       search-history = "cat ~/.cache/zsh_history | grep";
+      nixdiff = "nvd diff $(\\ls -d1v /nix/var/nix/profiles/system-*-link|tail -n 2)";
 
       v     = "nvim";
       cat   = "bat";
