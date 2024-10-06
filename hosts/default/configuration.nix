@@ -26,7 +26,6 @@
   users.users.ren = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" "audio" "video" ];
-    shell = pkgs.zsh;
   };
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -34,6 +33,14 @@
       "ren" = import ./home.nix;
     };
   };
+
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+
+  programs.neovim.enable = true;
+  programs.neovim.defaultEditor = true;
+
+  programs.hyprland.enable = true;
 
   # Core packages
   environment.systemPackages = with pkgs; [
@@ -48,11 +55,6 @@
     adwaita-icon-theme
     hicolor-icon-theme
   ];
-
-  # Core programs
-  programs.zsh.enable = true;
-  programs.neovim.enable = true;
-  programs.hyprland.enable = true;
 
   # For Steam
   hardware.graphics.enable32Bit = true;

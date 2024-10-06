@@ -60,7 +60,7 @@
     userName  = "Red Penguin";
     userEmail = "redpenguin777@yahoo.com";
     extraConfig = {
-      init.defaultBranch = "master";        
+      init.defaultBranch = "master";
       advice.addIgnoredFile = false;
     };
   };
