@@ -10,15 +10,6 @@
   "editor:toggle-bold": [],
   "editor:toggle-italics": [],
   "markdown:add-metadata-property": [],
-  "slides:start": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "P"
-    }
-  ],
   "workspace:split-vertical": [
     {
       "modifiers": [
@@ -44,6 +35,24 @@
         "Shift"
       ],
       "key": "ArrowDown"
+    }
+  ],
+  "workspace:export-pdf": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ],
+  "file-explorer:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "E"
     }
   ]
 }
