@@ -31,6 +31,7 @@
     synology-drive-client
 
     baobab
+    vlc
 
     obs-studio
     osu-lazer-bin
