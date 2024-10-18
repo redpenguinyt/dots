@@ -1,4 +1,4 @@
-.progress-bar, .theme-dark {
+.theme-dark {
     --background-primary: #1a1d2c;
     --background-secondary: #151426;
     --background-secondary-alt: #151426;
@@ -40,6 +40,13 @@
 
 .mod-sidedock .workspace-tab-header-container > div:not(:last-child) {
     display: none;
+}
+
+/* PDF Progress bar */
+.progress-bar-container {
+    --background-primary: #1a1d2c;
+    --text-muted: #657b83;
+    --interactive-accent: #93b5af;
 }
 
 /* Slides modifications */
