@@ -36,7 +36,7 @@
     obs-studio
     osu-lazer-bin
     steam
-    modrinth-app
+    lunar-client
   ];
 
   programs.spicetify =
