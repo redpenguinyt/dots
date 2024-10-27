@@ -5,6 +5,7 @@
   "nativeMenus": false,
   "enabledCssSnippets": [
     "colours",
+    "page-break",
     "ObsidianColours"
   ],
   "theme": "obsidian",

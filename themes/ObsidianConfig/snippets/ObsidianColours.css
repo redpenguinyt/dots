@@ -34,6 +34,10 @@
     display: none;
 }
 
+.workspace-tab-header-tab-list > span.clickable-icon:first-child { /* Hide tab manager dropdown */
+    display: none;
+}
+
 .mod-sidedock .workspace-tab-header-container {
     border-bottom: none;
 }
