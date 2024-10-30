@@ -6,6 +6,7 @@
   ];
 
   # Use the systemd-boot EFI boot loader.
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.timeout = 0;
@@ -64,7 +65,7 @@
     (nerdfonts.override { fonts = [ "CascadiaCode" "CascadiaMono" ]; })
     cantarell-fonts
     noto-fonts
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
     noto-fonts-emoji
     cantarell-fonts
     font-awesome
