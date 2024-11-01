@@ -18,6 +18,8 @@
   networking.networkmanager.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false; # Avoid waiting for network on boot
 
+  services.udev.extraRules = ''KERNEL=="ttyACM[0-9]*",MODE="0666"''; # Allow reading serial
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "24.05"; # Do not change under any circumstance
 
