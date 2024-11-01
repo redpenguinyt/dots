@@ -19,9 +19,11 @@
       ls    = "eza -h";
       clear = "echo -n '\\e[H\\e[3J'";
       cls   = "clear";
+      "..."   = "../..";
     };
 
     initExtra = ''
+      setopt auto_pushd
       bindkey "^[[1;5C" forward-word
       bindkey "^[[1;5D" backward-word
       bindkey '^[[Z' reverse-menu-complete
