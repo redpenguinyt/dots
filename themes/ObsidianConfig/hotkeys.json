@@ -81,5 +81,20 @@
       ],
       "key": "P"
     }
+  ],
+  "editor:insert-link": [],
+  "switcher:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "O"
+    },
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "K"
+    }
   ]
 }
