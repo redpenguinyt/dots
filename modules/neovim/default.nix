@@ -83,4 +83,5 @@
       ${builtins.readFile ./options.lua}
     '';
   };
+  home.shellAliases.v = "nvim";
 }
