@@ -21,7 +21,7 @@
         },
         {
             "type": "os",
-            "key": "",
+            "key": "󱄅",
             "format": "{2} {8}"
         },
         {
@@ -34,7 +34,8 @@
         },
         {
             "type": "packages",
-            "key": "󰏖"
+            "key": "󰏖",
+            "format": "{1} (all packages)"
         },
         {
             "type": "uptime",
