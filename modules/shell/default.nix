@@ -11,6 +11,7 @@
       rebuild = "sudo nixos-rebuild switch --fast --flake";
       nixdiff = "nvd diff $(\\ls -d1v /nix/var/nix/profiles/system-*-link|tail -n 2)";
       search-history = "cat ~/.cache/zsh_history | grep";
+      bg-run = "hyprctl dispatch exec --";
 
       clear = "echo -n '\\e[H\\e[3J'";
       cls   = "clear";
