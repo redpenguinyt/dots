@@ -64,7 +64,8 @@
   hardware.pulseaudio.support32Bit = true;
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "CascadiaCode" "CascadiaMono" ]; })
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.caskaydia-mono
     cantarell-fonts
     noto-fonts
     noto-fonts-cjk-sans
