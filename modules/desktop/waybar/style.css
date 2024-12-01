@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, CaskaydiaMono Nerd Font, Roboto, Helvetica, Arial, sans-serif;
+    font-family: CaskaydiaCove Nerd Font, FontAwesome6Free, Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
 }
 
@@ -80,15 +80,19 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 7px;
+    padding: 0;
+    padding-right: 7px;
+    padding-left: 4px;
 }
 
-#battery { /* Battery icon was cut off before */
+#battery,
+#wireplumber { /* Prevent icon cropping */
     padding-right: 8px;
 }
 
-#wireplumber {
-    padding: 0 5px;
+#cpu,
+#battery {
+    padding-left: 2px;
 }
 
 #window,
@@ -133,26 +137,4 @@ label:focus {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
-}
-
-#language {
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
 }

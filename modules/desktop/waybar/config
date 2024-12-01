@@ -61,8 +61,8 @@
     },
     "wireplumber": {
         "format": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": ["", "", ""],
+        "format-muted": "",
+        "format-icons": ["", "", "", ""],
         "on-click": "~/.config/hypr/scripts/audio.sh"
     },
     "network": {
