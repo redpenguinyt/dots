@@ -28,7 +28,7 @@
   # User
   users.users.ren = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "audio" "video" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "dialout" ];
   };
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
