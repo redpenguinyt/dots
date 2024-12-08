@@ -14,6 +14,7 @@
     extraPackages = with pkgs; [
       # luajitPackages.lua-lsp
       nil
+      clang-tools
     ];
 
     plugins = with pkgs.vimPlugins; [
