@@ -5,6 +5,7 @@
     ../../modules/kitty
     ../../modules/shell
     ../../modules/neovim
+    ../../themes/Vesktop
   ];
 
   home.username = "ren";
@@ -26,7 +27,6 @@
     vscode
     gcc rustup python3
 
-    vesktop
     thunderbird
     synology-drive-client
 
