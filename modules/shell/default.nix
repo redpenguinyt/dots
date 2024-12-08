@@ -80,6 +80,6 @@
     '';
   };
 
-  # programs.cava.enable = true;
-  # home.file.".config/cava".source = ./cava;
+  programs.cava.enable = true;
+  home.file.".config/cava".source = ./cava;
 }
