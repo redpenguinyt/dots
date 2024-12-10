@@ -15,6 +15,7 @@
       # luajitPackages.lua-lsp
       nil
       clang-tools
+      rustup
     ];
 
     plugins = with pkgs.vimPlugins; [
@@ -85,4 +86,9 @@
     '';
   };
   home.shellAliases.v = "nvim";
+
+  # Clangd C-only config
+  home.file."~/.config/clangd/config.yaml".text = ''CompileFlags:
+    Add: [-xc]
+  '';
 }
