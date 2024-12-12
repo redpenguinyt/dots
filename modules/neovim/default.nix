@@ -88,7 +88,7 @@
   home.shellAliases.v = "nvim";
 
   # Clangd C-only config
-  home.file."~/.config/clangd/config.yaml".text = ''CompileFlags:
+  home.file.".config/clangd/config.yaml".text = ''CompileFlags:
     Add: [-xc]
   '';
 }
